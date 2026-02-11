@@ -25,5 +25,4 @@ dist-ssr
 *.sw?
 
 # Agent documentation (local only)
-DEVELOPER_GUIDE.md
-/SOUL.md
+agents/
