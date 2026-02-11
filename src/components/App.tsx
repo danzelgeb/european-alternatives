@@ -8,58 +8,65 @@ import { supportedLanguages, defaultLanguage, localeMap, detectBrowserLanguage, 
 
 function LocaleLayout() {
   const { lang } = useParams<{ lang: string }>();
-  const { i18n, t } = useTranslation();
+  const { i18n } = useTranslation();
 
   useEffect(() => {
     if (lang && supportedLanguages.includes(lang as SupportedLanguage)) {
-      i18n.changeLanguage(lang);
-      document.documentElement.lang = lang;
-      document.title = t('meta.title');
+      const apply = (translate: (key: string) => string) => {
+        document.documentElement.lang = lang;
+        document.title = translate('meta.title');
 
-      const metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) metaDesc.setAttribute('content', t('meta.description'));
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute('content', translate('meta.description'));
 
-      const ogTitle = document.querySelector('meta[property="og:title"]');
-      if (ogTitle) ogTitle.setAttribute('content', t('meta.title'));
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute('content', translate('meta.title'));
 
-      const ogDesc = document.querySelector('meta[property="og:description"]');
-      if (ogDesc) ogDesc.setAttribute('content', t('meta.ogDescription'));
+        const ogDesc = document.querySelector('meta[property="og:description"]');
+        if (ogDesc) ogDesc.setAttribute('content', translate('meta.ogDescription'));
 
-      const ogLocale = document.querySelector('meta[property="og:locale"]');
-      if (ogLocale) ogLocale.setAttribute('content', localeMap[lang as SupportedLanguage]);
+        const ogLocale = document.querySelector('meta[property="og:locale"]');
+        if (ogLocale) ogLocale.setAttribute('content', localeMap[lang as SupportedLanguage]);
 
-      const twTitle = document.querySelector('meta[name="twitter:title"]');
-      if (twTitle) twTitle.setAttribute('content', t('meta.title'));
+        const twTitle = document.querySelector('meta[name="twitter:title"]');
+        if (twTitle) twTitle.setAttribute('content', translate('meta.title'));
 
-      const twDesc = document.querySelector('meta[name="twitter:description"]');
-      if (twDesc) twDesc.setAttribute('content', t('meta.ogDescription'));
+        const twDesc = document.querySelector('meta[name="twitter:description"]');
+        if (twDesc) twDesc.setAttribute('content', translate('meta.ogDescription'));
 
-      // Manage hreflang alternate links
-      document.querySelectorAll('link[hreflang]').forEach((el) => el.remove());
-      const pathWithoutLang = window.location.pathname.replace(new RegExp(`^/${lang}`), '');
-      for (const sl of supportedLanguages) {
-        const link = document.createElement('link');
-        link.rel = 'alternate';
-        link.hreflang = sl;
-        link.href = `${window.location.origin}/${sl}${pathWithoutLang}`;
-        document.head.appendChild(link);
+        // Manage hreflang alternate links
+        document.querySelectorAll('link[hreflang]').forEach((el) => el.remove());
+        const pathWithoutLang = window.location.pathname.replace(new RegExp(`^/${lang}`), '');
+        for (const sl of supportedLanguages) {
+          const link = document.createElement('link');
+          link.rel = 'alternate';
+          link.hreflang = sl;
+          link.href = `${window.location.origin}/${sl}${pathWithoutLang}`;
+          document.head.appendChild(link);
+        }
+        const xDefault = document.createElement('link');
+        xDefault.rel = 'alternate';
+        xDefault.hreflang = 'x-default';
+        xDefault.href = `${window.location.origin}/${defaultLanguage}${pathWithoutLang}`;
+        document.head.appendChild(xDefault);
+
+        // Manage canonical URL
+        let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+        if (!canonical) {
+          canonical = document.createElement('link');
+          canonical.rel = 'canonical';
+          document.head.appendChild(canonical);
+        }
+        canonical.href = `${window.location.origin}/${lang}${pathWithoutLang}`;
+      };
+
+      if (i18n.language !== lang) {
+        i18n.changeLanguage(lang).then((t) => apply(t));
+      } else {
+        apply(i18n.t.bind(i18n));
       }
-      const xDefault = document.createElement('link');
-      xDefault.rel = 'alternate';
-      xDefault.hreflang = 'x-default';
-      xDefault.href = `${window.location.origin}/${defaultLanguage}${pathWithoutLang}`;
-      document.head.appendChild(xDefault);
-
-      // Manage canonical URL
-      let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
-      if (!canonical) {
-        canonical = document.createElement('link');
-        canonical.rel = 'canonical';
-        document.head.appendChild(canonical);
-      }
-      canonical.href = `${window.location.origin}/${lang}${pathWithoutLang}`;
     }
-  }, [lang, i18n, t]);
+  }, [lang, i18n]);
 
   if (!lang || !supportedLanguages.includes(lang as SupportedLanguage)) {
     return <Navigate to={`/${defaultLanguage}`} replace />;
@@ -96,12 +103,10 @@ function CatchAllRedirect() {
 export default function App() {
   return (
     <Routes>
-      {supportedLanguages.map((lang) => (
-        <Route key={lang} path={`/${lang}`} element={<LocaleLayout />}>
-          <Route index element={<LandingPage />} />
-          <Route path="browse" element={<BrowsePage />} />
-        </Route>
-      ))}
+      <Route path="/:lang" element={<LocaleLayout />}>
+        <Route index element={<LandingPage />} />
+        <Route path="browse" element={<BrowsePage />} />
+      </Route>
       <Route path="/" element={<LanguageRedirect />} />
       <Route path="/browse" element={<BrowseRedirect />} />
       <Route path="*" element={<CatchAllRedirect />} />
