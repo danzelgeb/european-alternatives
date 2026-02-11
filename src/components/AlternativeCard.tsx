@@ -69,7 +69,20 @@ export default function AlternativeCard({ alternative, viewMode }: AlternativeCa
           <span className={`fi fi-${alternative.country} alt-card-flag-badge`}></span>
         </div>
         <div className="alt-card-title-section">
-          <h3 className="alt-card-name">{alternative.name}</h3>
+          <div className="alt-card-title-row">
+            <h3 className="alt-card-name">{alternative.name}</h3>
+            {isTrustScorePending ? (
+              <span className="alt-card-trust-stamp alt-card-trust-stamp-pending">
+                {t('browse:card.trustScorePending')}
+              </span>
+            ) : (
+              trustScoreLabel && (
+                <span className={`alt-card-trust-stamp ${trustBadgeClass.replace('alt-card-badge', 'alt-card-trust-stamp')}`}>
+                  {t('browse:card.trustScoreLabel', { score: trustScoreLabel })}
+                </span>
+              )
+            )}
+          </div>
           {category && (
             <span className="alt-card-category">
               <span className="alt-card-category-emoji">{category.emoji}</span>
@@ -169,17 +182,6 @@ export default function AlternativeCard({ alternative, viewMode }: AlternativeCa
             </svg>
             {t('common:openSource')}
           </span>
-        )}
-        {isTrustScorePending ? (
-          <span className="alt-card-badge alt-card-badge-trust-pending">
-            {t('browse:card.trustScorePending')}
-          </span>
-        ) : (
-          trustScoreLabel && (
-            <span className={`alt-card-badge ${trustBadgeClass}`}>
-              {t('browse:card.trustScoreLabel', { score: trustScoreLabel })}
-            </span>
-          )
         )}
         {alternative.tags.slice(0, 2).map((tag) => (
           <span key={tag} className="alt-card-badge alt-card-badge-tag">{tag}</span>

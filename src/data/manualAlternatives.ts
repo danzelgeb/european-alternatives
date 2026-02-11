@@ -7,7 +7,7 @@ export const manualAlternatives: Alternative[] = [
     description:
       'German encrypted email service (formerly Tutanota) with zero-knowledge mail, calendar, and contacts plus post-quantum TutaCrypt (ECC + Kyber). Tuta open-sources its clients under GPLv3, while its server-side infrastructure remains proprietary and no IMAP mailbox access is offered.',
     localizedDescriptions: {
-      de: 'Ende-zu-Ende-verschluesselter E-Mail-Dienst aus Deutschland. Frueher bekannt als Tutanota, bietet Tuta sichere E-Mail, Kalender und Kontakte mit Zero-Knowledge-Verschluesselung und Post-Quanten-Kryptografie. Clients sind quelloffen, der Backend-Stack bleibt proprietaer und IMAP wird nicht angeboten.',
+      de: 'Ende-zu-Ende-verschlüsselter E-Mail-Dienst aus Deutschland. Früher bekannt als Tutanota, bietet Tuta sichere E-Mail, Kalender und Kontakte mit Zero-Knowledge-Verschlüsselung und Post-Quanten-Kryptografie. Clients sind quelloffen, der Backend-Stack bleibt proprietär und IMAP wird nicht angeboten.',
     },
     website: 'https://tuta.com',
     logo: '/logos/tuta.svg',
@@ -20,7 +20,7 @@ export const manualAlternatives: Alternative[] = [
     pricing: 'freemium',
     tags: ['encryption', 'privacy', 'gdpr', 'zero-knowledge', 'ad-free', 'post-quantum'],
     foundedYear: 2011,
-    headquartersCity: 'Hanover',
+    headquartersCity: 'Hannover',
     license: 'GPL-3.0 (clients); proprietary backend',
   },
   {
@@ -29,7 +29,7 @@ export const manualAlternatives: Alternative[] = [
     description:
       'French AI company building frontier large language models and Le Chat, founded by former Google DeepMind and Meta researchers. Mistral uses a hybrid model strategy: open models like Mistral 7B and Mixtral are Apache 2.0, while larger flagship models are proprietary via API.',
     localizedDescriptions: {
-      de: 'Franzoesisches KI-Unternehmen, das fuehrende Open-Weight-Sprachmodelle und Le Chat, einen schnellen, datenschutzorientierten Assistenten, entwickelt. Gegruendet von ehemaligen Forschern von Google DeepMind und Meta, setzt sich Mistral fuer europaeische Datensouveraenitaet mit DSGVO-konformer Infrastruktur ein.',
+      de: 'Französisches KI-Unternehmen, das führende Open-Weight-Sprachmodelle und Le Chat, einen schnellen, datenschutzorientierten Assistenten, entwickelt. Gegründet von ehemaligen Forschern von Google DeepMind und Meta, setzt sich Mistral für europäische Datensouveränität mit DSGVO-konformer Infrastruktur ein.',
     },
     website: 'https://mistral.ai',
     logo: '/logos/mistral.svg',
@@ -51,7 +51,7 @@ export const manualAlternatives: Alternative[] = [
     description:
       'Free, sovereign AI assistant by Swiss company Infomaniak, hosted entirely in Switzerland with renewable energy. Offers chat, voice input, image analysis, document processing, web search, and translation with an ephemeral mode that leaves no trace on servers.',
     localizedDescriptions: {
-      de: 'Kostenloser, souveraener KI-Assistent des Schweizer Unternehmens Infomaniak, vollstaendig in der Schweiz mit erneuerbarer Energie gehostet. Bietet Chat, Spracheingabe, Bildanalyse, Dokumentenverarbeitung, Websuche und Uebersetzung mit einem fluechtigen Modus, der keinerlei Spuren auf den Servern hinterlaesst.',
+      de: 'Kostenloser, souveräner KI-Assistent des Schweizer Unternehmens Infomaniak, vollständig in der Schweiz mit erneuerbarer Energie gehostet. Bietet Chat, Spracheingabe, Bildanalyse, Dokumentenverarbeitung, Websuche und Übersetzung mit einem flüchtigen Modus, der keinerlei Spuren auf den Servern hinterlässt.',
     },
     website: 'https://euria.infomaniak.com',
     logo: '/logos/euria.svg',
@@ -73,7 +73,7 @@ export const manualAlternatives: Alternative[] = [
     description:
       'Dutch privacy-first search engine that delivers Google search results without tracking, logging IP addresses, or storing personal data. Features an Anonymous View proxy for browsing search results with full anonymity, and has held the European Privacy Seal since 2011.',
     localizedDescriptions: {
-      de: 'Niederlaendische Suchmaschine mit Fokus auf Datenschutz, die Google-Suchergebnisse liefert, ohne zu tracken, IP-Adressen zu speichern oder persoenliche Daten zu erfassen. Bietet einen Anonymous-View-Proxy zum anonymen Durchsuchen von Ergebnissen und traegt seit 2011 das Europaeische Datenschutzsiegel.',
+      de: 'Niederländische Suchmaschine mit Fokus auf Datenschutz, die Google-Suchergebnisse liefert, ohne zu tracken, IP-Adressen zu speichern oder persönliche Daten zu erfassen. Bietet einen Anonymous-View-Proxy zum anonymen Durchsuchen von Ergebnissen und trägt seit 2011 das Europäische Datenschutzsiegel.',
     },
     website: 'https://www.startpage.com',
     logo: '/logos/startpage.svg',
@@ -93,7 +93,7 @@ export const manualAlternatives: Alternative[] = [
     description:
       'Privacy-first AI assistant from the makers of Proton Mail. Lumo keeps every conversation confidential with zero-access encryption, never logs prompts or responses, and never uses your data to train models - a stark contrast to US-based AI chatbots.',
     localizedDescriptions: {
-      de: 'Datenschutzorientierter KI-Assistent von den Machern von Proton Mail. Lumo haelt jede Konversation mit Zero-Access-Verschluesselung vertraulich, speichert weder Eingaben noch Antworten und verwendet Ihre Daten niemals zum Trainieren von Modellen - ein deutlicher Gegensatz zu US-amerikanischen KI-Chatbots.',
+      de: 'Datenschutzorientierter KI-Assistent von den Machern von Proton Mail. Lumo hält jede Konversation mit Zero-Access-Verschlüsselung vertraulich, speichert weder Eingaben noch Antworten und verwendet Ihre Daten niemals zum Trainieren von Modellen - ein deutlicher Gegensatz zu US-amerikanischen KI-Chatbots.',
     },
     website: 'https://lumo.proton.me',
     logo: '/logos/lumo.svg',
@@ -115,7 +115,7 @@ export const manualAlternatives: Alternative[] = [
     description:
       'Berlin-based search engine that donates at least 80% of its profits to tree-planting projects worldwide, having funded over 200 million trees since 2009. A certified B Corp under steward-ownership, Ecosia runs on 100% renewable energy and offers a privacy-friendly alternative to US search giants.',
     localizedDescriptions: {
-      de: 'Berliner Suchmaschine, die mindestens 80 % ihrer Gewinne an Baumpflanzprojekte weltweit spendet und seit 2009 ueber 200 Millionen Baeume finanziert hat. Als zertifiziertes B Corp in Verantwortungseigentum betreibt Ecosia seine Dienste mit 100 % erneuerbarer Energie und bietet eine datenschutzfreundliche Alternative zu US-Suchmaschinen.',
+      de: 'Berliner Suchmaschine, die mindestens 80 % ihrer Gewinne an Baumpflanzprojekte weltweit spendet und seit 2009 über 200 Millionen Bäume finanziert hat. Als zertifiziertes B Corp in Verantwortungseigentum betreibt Ecosia seine Dienste mit 100 % erneuerbarer Energie und bietet eine datenschutzfreundliche Alternative zu US-Suchmaschinen.',
     },
     website: 'https://www.ecosia.org',
     logo: '/logos/ecosia.svg',
@@ -136,7 +136,7 @@ export const manualAlternatives: Alternative[] = [
     description:
       'Community-built open map of the world, founded in 2004 to provide a free, editable alternative to proprietary mapping platforms. OpenStreetMap data powers countless apps and humanitarian responses, and can be used offline or self-hosted through many tools.',
     localizedDescriptions: {
-      de: 'Community-getragene offene Weltkarte, gegruendet 2004 als freie, bearbeitbare Alternative zu proprietaeren Kartenplattformen. OpenStreetMap-Daten treiben unzaehlige Apps und humanitaere Einsaetze an und koennen mit vielen Tools offline oder selbst gehostet genutzt werden.',
+      de: 'Community-getragene offene Weltkarte, gegründet 2004 als freie, bearbeitbare Alternative zu proprietären Kartenplattformen. OpenStreetMap-Daten treiben unzählige Apps und humanitäre Einsätze an und können mit vielen Tools offline oder selbst gehostet genutzt werden.',
     },
     website: 'https://www.openstreetmap.org',
     country: 'gb',

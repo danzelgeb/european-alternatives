@@ -1548,7 +1548,7 @@ export const researchAlternatives: Alternative[] = [
       "amazon"
     ],
     "foundedYear": 2000,
-    "headquartersCity": "Schoeppingen",
+    "headquartersCity": "Schöppingen",
     "githubUrl": "https://github.com/shopware/shopware",
     "license": "MIT (Community Edition, with contributor CLA)"
   },

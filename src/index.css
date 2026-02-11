@@ -1280,6 +1280,16 @@ button:disabled {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
+  width: 100%;
+  min-width: 0;
+}
+
+.alt-card-title-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  width: 100%;
 }
 
 .alt-card-name {
@@ -1290,6 +1300,45 @@ button:disabled {
   letter-spacing: 0.02em;
   color: var(--text-primary);
   margin: 0;
+}
+
+.alt-card-trust-stamp {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.45rem;
+  font-size: 0.68rem;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.alt-card-trust-stamp-pending {
+  background: var(--warning-10);
+  border-color: var(--warning);
+  color: var(--warning);
+}
+
+.alt-card-trust-stamp-trust-high {
+  background: var(--success-10);
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.alt-card-trust-stamp-trust-medium {
+  background: var(--warning-10);
+  border-color: var(--warning);
+  color: var(--warning);
+}
+
+.alt-card-trust-stamp-trust-low {
+  background: var(--error-10);
+  border-color: var(--error);
+  color: var(--error);
 }
 
 .alt-card-category {
@@ -1839,5 +1888,13 @@ button:disabled {
   .alt-card-us-vendor-summary {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .alt-card-title-row {
+    flex-wrap: wrap;
+  }
+
+  .alt-card-trust-stamp {
+    white-space: normal;
   }
 }

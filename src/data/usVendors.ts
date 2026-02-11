@@ -191,14 +191,14 @@ const US_VENDOR_TRUST_PROFILES: Record<string, USVendorTrustProfile> = {
       {
         id: 'ad-tech-majority-control',
         text: 'Alphabet remains majority-funded by advertising, creating structural incentives that can conflict with privacy-first expectations.',
-        textDe: 'Alphabet erzielt weiterhin den Grossteil seines Umsatzes aus Werbung, was strukturelle Anreize schafft, die mit Privacy-First-Erwartungen kollidieren koennen.',
+        textDe: 'Alphabet erzielt weiterhin den Großteil seines Umsatzes aus Werbung, was strukturelle Anreize schafft, die mit Privacy-First-Erwartungen kollidieren können.',
         severity: 'major',
         sourceUrl: 'https://www.sec.gov/ixviewer/ix.html?doc=/Archives/edgar/data/1652044/000165204425000014/goog-20241231.htm',
       },
       {
         id: 'major-privacy-settlement-2025',
         text: 'Google agreed to a $1.375B Texas settlement over privacy allegations around location, incognito, and biometrics.',
-        textDe: 'Google stimmte in Texas einem Vergleich ueber 1,375 Mrd. USD zu, basierend auf Privacy-Vorwuerfen zu Standortdaten, Incognito und biometrischen Daten.',
+        textDe: 'Google stimmte in Texas einem Vergleich über 1,375 Mrd. USD zu, basierend auf Privacy-Vorwürfen zu Standortdaten, Incognito und biometrischen Daten.',
         severity: 'major',
         date: '2025-05-09',
         sourceUrl: 'https://apnews.com/article/8097e181cc7cb8522781db8a9a897eea',
@@ -206,7 +206,7 @@ const US_VENDOR_TRUST_PROFILES: Record<string, USVendorTrustProfile> = {
       {
         id: 'adverse-antitrust-rulings-2024-2025',
         text: 'US antitrust cases found Google violated competition law in search and open-web ad-tech markets.',
-        textDe: 'US-Antitrust-Verfahren stellten fest, dass Google im Such- und Open-Web-Ad-Tech-Markt gegen Wettbewerbsrecht verstossen hat.',
+        textDe: 'US-Antitrust-Verfahren stellten fest, dass Google im Such- und Open-Web-Ad-Tech-Markt gegen Wettbewerbsrecht verstoßen hat.',
         severity: 'major',
         date: '2025-04-17',
         sourceUrl: 'https://www.justice.gov/opa/pr/department-justice-prevails-landmark-antitrust-case-against-google',
@@ -214,7 +214,7 @@ const US_VENDOR_TRUST_PROFILES: Record<string, USVendorTrustProfile> = {
       {
         id: 'gemini-bundled-pricing-2025',
         text: 'Workspace business plans were repriced while Gemini AI features were bundled into base offerings, reducing opt-out flexibility on cost.',
-        textDe: 'Workspace-Business-Plaene wurden neu bepreist, waehrend Gemini-AI-Funktionen in Basispakete gebuendelt wurden, was die Kosten-Opt-out-Flexibilitaet reduziert.',
+        textDe: 'Workspace-Business-Pläne wurden neu bepreist, während Gemini-AI-Funktionen in Basispakete gebündelt wurden, was die Kosten-Opt-out-Flexibilität reduziert.',
         severity: 'moderate',
         date: '2025-01-15',
         sourceUrl: 'https://workspace.google.com/blog/product-announcements/empowering-businesses-with-AI',
