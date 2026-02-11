@@ -1,8 +1,11 @@
 import type { Reservation } from '../types';
 
 export const trustScoresById: Record<string, number> = {
+  bitwarden: 8.9,
+  cryptpad: 8.6,
   ecosia: 7.5,
   nextcloud: 7.6,
+  startpage: 6.4,
   tuta: 7.5,
 };
 
@@ -18,11 +21,12 @@ export const reservationsById: Record<string, Reservation[]> = {
   ],
   bitwarden: [
     {
-      id: 'us-jurisdiction',
-      text: 'Terms include California governing law and US legal venue.',
-      textDe: 'Die Nutzungsbedingungen nennen kalifornisches Recht und einen US-Gerichtsstand.',
+      id: 'pricing-shift-2026',
+      text: 'Premium and Families plans were repriced in January 2026, increasing renewal costs for many subscribers.',
+      textDe: 'Premium- und Familienplaene wurden im Januar 2026 neu bepreist, was die Verlaengerungskosten fuer viele Abonnenten erhoeht hat.',
       severity: 'moderate',
-      sourceUrl: 'https://bitwarden.com/help/terms/',
+      date: '2026-01-20',
+      sourceUrl: 'https://community.bitwarden.com/t/bitwarden-launches-enhanced-premium-plan/93006',
     },
     {
       id: 'sdk-license-incident-2024',
@@ -40,6 +44,37 @@ export const reservationsById: Record<string, Reservation[]> = {
       textDe: 'Eingaben aus dem Free-Tier können zur Modellverbesserung genutzt werden, während Pro/API-Kundendaten vom Training ausgenommen sind.',
       severity: 'moderate',
       sourceUrl: 'https://www.deepl.com/en/pro-data-security/',
+    },
+  ],
+  cryptpad: [
+    {
+      id: 'instance-client-code-trust-assumption',
+      text: 'CryptPad security depends on trusting the chosen instance to serve the same client code published upstream.',
+      textDe: 'Die Sicherheit von CryptPad hängt davon ab, der gewählten Instanz zu vertrauen, dass sie denselben Client-Code wie upstream ausliefert.',
+      severity: 'major',
+      sourceUrl: 'https://docs.cryptpad.org/en/user_guide/security.html#trust-assumptions',
+    },
+    {
+      id: 'metadata-not-fully-hidden',
+      text: 'The selected CryptPad instance can still see connection metadata such as IP address and user agent.',
+      textDe: 'Die gewählte CryptPad-Instanz kann weiterhin Verbindungs-Metadaten wie IP-Adresse und User-Agent sehen.',
+      severity: 'moderate',
+      sourceUrl: 'https://docs.cryptpad.org/en/user_guide/security.html#trust-assumptions',
+    },
+    {
+      id: 'shared-link-interception-risk',
+      text: 'If a document link is shared over insecure channels, interception can expose access unless additional access controls are used.',
+      textDe: 'Wenn ein Dokument-Link über unsichere Kanäle geteilt wird, kann eine Abfangung den Zugriff ermöglichen, sofern keine zusätzlichen Zugriffskontrollen gesetzt sind.',
+      severity: 'moderate',
+      sourceUrl: 'https://docs.cryptpad.org/en/user_guide/security.html#passwords-for-documents-and-folders',
+    },
+    {
+      id: 'high-severity-2fa-bypass-2025',
+      text: 'A published 2025 advisory disclosed a high-severity 2FA bypass affecting versions up to 2024.12.0 before patching.',
+      textDe: 'Ein veröffentlichter Advisory von 2025 beschrieb einen High-Severity-2FA-Bypass für Versionen bis 2024.12.0, bevor ein Patch verfügbar war.',
+      severity: 'major',
+      date: '2025-06-18',
+      sourceUrl: 'https://github.com/cryptpad/cryptpad/security/advisories/GHSA-xq5x-wgcm-3p33',
     },
   ],
   ecosia: [
@@ -235,12 +270,33 @@ export const reservationsById: Record<string, Reservation[]> = {
   ],
   startpage: [
     {
-      id: 'system1-majority-stake',
-      text: 'A majority stake was acquired by US ad-tech company System1 in 2019.',
-      textDe: 'Ein Mehrheitsanteil wurde 2019 vom US-Ad-Tech-Unternehmen System1 übernommen.',
-      severity: 'moderate',
+      id: 'system1-majority-ownership',
+      text: 'Startpage states that System1 has majority ownership, and System1 is a US publicly traded ad-tech company.',
+      textDe: 'Startpage gibt an, dass System1 die Mehrheitsbeteiligung haelt; System1 ist ein boersennotiertes US-Ad-Tech-Unternehmen.',
+      severity: 'major',
       date: '2019-10-01',
-      sourceUrl: 'https://support.startpage.com/hc/en-us/articles/4455577632788-How-has-Startpage-responded-to-the-privacy-community-s-concerns-about-System1',
+      sourceUrl: 'https://www.startpage.com/privacy-please/startpage-articles/startpage-relisted-on-privacytools',
+    },
+    {
+      id: 'sponsored-links-google-adsense',
+      text: 'Sponsored links are served via Google AdSense, so monetization partly depends on a US ad platform.',
+      textDe: 'Gesponserte Links laufen ueber Google AdSense; die Monetarisierung haengt damit teilweise von einer US-Werbeplattform ab.',
+      severity: 'moderate',
+      sourceUrl: 'https://www.startpage.com/en/privacy-policy/',
+    },
+    {
+      id: 'support-uses-zendesk-us',
+      text: 'Support requests are processed with Zendesk, a US-headquartered provider.',
+      textDe: 'Support-Anfragen werden mit Zendesk verarbeitet, einem Anbieter mit Hauptsitz in den USA.',
+      severity: 'moderate',
+      sourceUrl: 'https://www.startpage.com/en/support-privacy-policy/',
+    },
+    {
+      id: 'no-security-txt-endpoint',
+      text: 'A public security.txt endpoint is not currently available at /.well-known/security.txt.',
+      textDe: 'Ein oeffentliches security.txt-Endpoint ist unter /.well-known/security.txt derzeit nicht verfuegbar.',
+      severity: 'minor',
+      sourceUrl: 'https://www.startpage.com/.well-known/security.txt',
     },
   ],
   threema: [
