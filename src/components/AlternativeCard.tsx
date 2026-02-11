@@ -10,8 +10,15 @@ interface AlternativeCardProps {
   viewMode: ViewMode;
 }
 
+function getTrustBadgeClass(score: number): string {
+  if (score < 5) return 'alt-card-badge-trust-low';
+  if (score <= 7) return 'alt-card-badge-trust-medium';
+  return 'alt-card-badge-trust-high';
+}
+
 export default function AlternativeCard({ alternative, viewMode }: AlternativeCardProps) {
   const [expanded, setExpanded] = useState(false);
+  const [usVendorDetailsExpanded, setUsVendorDetailsExpanded] = useState(false);
   const [logoError, setLogoError] = useState(false);
   const { t, i18n } = useTranslation(['browse', 'common', 'data']);
 
@@ -26,6 +33,9 @@ export default function AlternativeCard({ alternative, viewMode }: AlternativeCa
 
   const isTrustScorePending = alternative.trustScoreStatus !== 'ready';
   const trustScoreLabel = alternative.trustScore != null ? alternative.trustScore.toFixed(1) : null;
+  const trustBadgeClass = alternative.trustScore != null
+    ? getTrustBadgeClass(alternative.trustScore)
+    : '';
   const hasReservations = (alternative.reservations?.length ?? 0) > 0;
   const fallbackUSVendorComparisons: USVendorComparison[] = alternative.replacesUS.map((name) => ({
       id: `us-${name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')}`,
@@ -72,49 +82,76 @@ export default function AlternativeCard({ alternative, viewMode }: AlternativeCa
       <p className="alt-card-description">{description}</p>
 
       <div className="alt-card-replaces">
-        <span className="alt-card-replaces-label">{t('browse:card.usVendorComparison')}</span>
-        <div className="alt-card-us-vendor-list">
+        <div className="alt-card-replaces-header">
+          <span className="alt-card-replaces-label">{t('browse:card.usVendorComparison')}</span>
+          <button
+            type="button"
+            className="alt-card-replaces-toggle"
+            onClick={() => setUsVendorDetailsExpanded(!usVendorDetailsExpanded)}
+            aria-expanded={usVendorDetailsExpanded}
+            aria-controls={`alt-us-vendors-${alternative.id}`}
+          >
+            <span>
+              {usVendorDetailsExpanded
+                ? t('browse:card.hideUSVendorDetails')
+                : t('browse:card.showUSVendorDetails')}
+            </span>
+            <svg
+              className={`alt-card-replaces-toggle-icon ${usVendorDetailsExpanded ? 'rotated' : ''}`}
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+            </svg>
+          </button>
+        </div>
+        <div id={`alt-us-vendors-${alternative.id}`} className="alt-card-us-vendor-list">
           {usVendorComparisons.map((vendor) => (
             <div key={vendor.id} className="alt-card-us-vendor-item">
-              <div className="alt-card-us-vendor-content">
+              <div className="alt-card-us-vendor-summary">
                 <span className="alt-card-us-vendor-name">{vendor.name}</span>
-                {((i18n.language.startsWith('de') && vendor.descriptionDe) || vendor.description) && (
-                  <p className="alt-card-us-vendor-description">
-                    {i18n.language.startsWith('de') && vendor.descriptionDe ? vendor.descriptionDe : vendor.description}
-                  </p>
-                )}
-                {(vendor.reservations?.length ?? 0) > 0 && (
-                  <ul className="alt-card-us-vendor-reservations">
-                    {vendor.reservations?.map((reservation) => (
-                      <li key={reservation.id} className="alt-card-us-vendor-reservation-item">
-                        <p className="alt-card-us-vendor-reservation-text">
-                          {i18n.language.startsWith('de') && reservation.textDe
-                            ? reservation.textDe
-                            : reservation.text}
-                        </p>
-                        {reservation.sourceUrl && (
-                          <a
-                            href={reservation.sourceUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="alt-detail-source-link"
-                          >
-                            {t('browse:card.reservationSource')}
-                          </a>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
+                {vendor.trustScoreStatus === 'ready' && vendor.trustScore != null ? (
+                  <span className={`alt-card-badge ${getTrustBadgeClass(vendor.trustScore)}`}>
+                    {t('browse:card.trustScoreLabel', { score: vendor.trustScore.toFixed(1) })}
+                  </span>
+                ) : (
+                  <span className="alt-card-badge alt-card-badge-trust-pending">
+                    {t('browse:card.trustScorePending')}
+                  </span>
                 )}
               </div>
-              {vendor.trustScoreStatus === 'ready' && vendor.trustScore != null ? (
-                <span className="alt-card-badge alt-card-badge-trust-ready">
-                  {t('browse:card.trustScoreLabel', { score: vendor.trustScore.toFixed(1) })}
-                </span>
-              ) : (
-                <span className="alt-card-badge alt-card-badge-trust-pending">
-                  {t('browse:card.trustScorePending')}
-                </span>
+              {usVendorDetailsExpanded && (
+                <div className="alt-card-us-vendor-content">
+                  {((i18n.language.startsWith('de') && vendor.descriptionDe) || vendor.description) && (
+                    <p className="alt-card-us-vendor-description">
+                      {i18n.language.startsWith('de') && vendor.descriptionDe ? vendor.descriptionDe : vendor.description}
+                    </p>
+                  )}
+                  {(vendor.reservations?.length ?? 0) > 0 && (
+                    <ul className="alt-card-us-vendor-reservations">
+                      {vendor.reservations?.map((reservation) => (
+                        <li key={reservation.id} className="alt-card-us-vendor-reservation-item">
+                          <p className="alt-card-us-vendor-reservation-text">
+                            {i18n.language.startsWith('de') && reservation.textDe
+                              ? reservation.textDe
+                              : reservation.text}
+                          </p>
+                          {reservation.sourceUrl && (
+                            <a
+                              href={reservation.sourceUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="alt-detail-source-link"
+                            >
+                              {t('browse:card.reservationSource')}
+                            </a>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               )}
             </div>
           ))}
@@ -139,7 +176,7 @@ export default function AlternativeCard({ alternative, viewMode }: AlternativeCa
           </span>
         ) : (
           trustScoreLabel && (
-            <span className="alt-card-badge alt-card-badge-trust-ready">
+            <span className={`alt-card-badge ${trustBadgeClass}`}>
               {t('browse:card.trustScoreLabel', { score: trustScoreLabel })}
             </span>
           )

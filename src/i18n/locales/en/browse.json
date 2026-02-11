@@ -37,6 +37,8 @@
     "github": "{{name}} on GitHub (opens in new tab)",
     "githubLabel": "GitHub",
     "usVendorComparison": "US Vendor Comparison",
+    "showUSVendorDetails": "Show details",
+    "hideUSVendorDetails": "Hide details",
     "trustScorePending": "Trust-Score Pending",
     "trustScoreLabel": "Trust Score: {{score}}/10",
     "reservations": "Reservations",
