@@ -5,7 +5,7 @@ export const manualAlternatives: Alternative[] = [
     id: 'tuta',
     name: 'Tuta',
     description:
-      'End-to-end encrypted email service built in Germany. Formerly known as Tutanota, Tuta offers secure email, calendar, and contacts with zero-knowledge encryption and post-quantum cryptography.',
+      'German encrypted email service (formerly Tutanota) with zero-knowledge mail, calendar, and contacts plus post-quantum TutaCrypt (ECC + Kyber). Tuta open-sources its clients under GPLv3, while its server-side infrastructure remains proprietary.',
     localizedDescriptions: {
       de: 'Ende-zu-Ende-verschluesselter E-Mail-Dienst aus Deutschland. Frueher bekannt als Tutanota, bietet Tuta sichere E-Mail, Kalender und Kontakte mit Zero-Knowledge-Verschluesselung und Post-Quanten-Kryptografie.',
     },
@@ -15,19 +15,19 @@ export const manualAlternatives: Alternative[] = [
     category: 'email',
     replacesUS: ['Gmail', 'Outlook', 'Yahoo Mail'],
     isOpenSource: true,
-    openSourceLevel: 'full',
+    openSourceLevel: 'partial',
     githubUrl: 'https://github.com/tutao/tutanota',
     pricing: 'freemium',
     tags: ['encryption', 'privacy', 'gdpr', 'zero-knowledge', 'ad-free', 'post-quantum'],
     foundedYear: 2011,
     headquartersCity: 'Hanover',
-    license: 'GPL-3.0',
+    license: 'GPL-3.0 (clients); proprietary backend',
   },
   {
     id: 'mistral',
     name: 'Mistral AI',
     description:
-      'French AI company building frontier open-weight large language models and Le Chat, a fast privacy-focused assistant. Founded by former Google DeepMind and Meta researchers, Mistral champions European data sovereignty with GDPR-compliant infrastructure.',
+      'French AI company building frontier large language models and Le Chat, founded by former Google DeepMind and Meta researchers. Mistral uses a hybrid model strategy: open models like Mistral 7B and Mixtral are Apache 2.0, while larger flagship models are proprietary via API.',
     localizedDescriptions: {
       de: 'Franzoesisches KI-Unternehmen, das fuehrende Open-Weight-Sprachmodelle und Le Chat, einen schnellen, datenschutzorientierten Assistenten, entwickelt. Gegruendet von ehemaligen Forschern von Google DeepMind und Meta, setzt sich Mistral fuer europaeische Datensouveraenitaet mit DSGVO-konformer Infrastruktur ein.',
     },
@@ -37,13 +37,13 @@ export const manualAlternatives: Alternative[] = [
     category: 'ai-ml',
     replacesUS: ['ChatGPT', 'Google Gemini', 'GitHub Copilot'],
     isOpenSource: true,
-    openSourceLevel: 'full',
+    openSourceLevel: 'partial',
     githubUrl: 'https://github.com/mistralai',
     pricing: 'freemium',
     tags: ['llm', 'open-weight', 'privacy', 'gdpr', 'generative-ai', 'api', 'on-premise'],
     foundedYear: 2023,
     headquartersCity: 'Paris',
-    license: 'Apache-2.0',
+    license: 'Apache-2.0 (open models); proprietary for flagship API models',
   },
   {
     id: 'euria',

@@ -78,12 +78,12 @@ export const researchAlternatives: Alternative[] = [
     ],
     "pricing": "freemium",
     "website": "https://bfl.ai",
-    "description": "German AI startup from Freiburg building the FLUX family of state-of-the-art text-to-image models. Founded by former Stability AI researchers who created the original Stable Diffusion, BFL offers open-weight models under Apache 2.0 alongside a commercial API, combining cutting-edge quality with European data sovereignty.",
+    "description": "German AI startup from Freiburg building the FLUX family of text-to-image models. Licensing is intentionally split: FLUX.1 [schnell] is Apache 2.0, FLUX.1 [dev] is non-commercial, and FLUX.1 [pro] is API-only proprietary.",
     "localizedDescriptions": {
       "de": "Deutsches KI-Startup aus Freiburg, das die FLUX-Familie hochmoderner Text-zu-Bild-Modelle entwickelt. Gegründet von ehemaligen Stability-AI-Forschern, die das ursprüngliche Stable Diffusion erschufen, bietet BFL offene Modellgewichte unter Apache 2.0 neben einer kommerziellen API und vereint Spitzenqualität mit europäischer Datensouveränität."
     },
     "isOpenSource": true,
-    "openSourceLevel": "full",
+    "openSourceLevel": "partial",
     "tags": [
       "ai-ml",
       "freemium",
@@ -94,7 +94,7 @@ export const researchAlternatives: Alternative[] = [
     "foundedYear": 2024,
     "headquartersCity": "Freiburg",
     "githubUrl": "https://github.com/black-forest-labs",
-    "license": "Apache-2.0"
+    "license": "Apache-2.0 (FLUX.1 [schnell]); non-commercial (FLUX.1 [dev]); proprietary API (FLUX.1 [pro])"
   },
   {
     "id": "collabora-online",
@@ -170,7 +170,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "pricing": "freemium",
     "website": "https://www.deepl.com",
-    "description": "Cologne-based AI translation platform widely regarded as more accurate and natural-sounding than Google Translate. Offers neural machine translation for 30+ languages, document translation, a writing assistant, and a developer API — all powered by proprietary deep-learning models trained in Europe.",
+    "description": "Cologne-based AI translation platform known for high-quality translation and writing assistance. DeepL trains on European infrastructure, including its Mercury NVIDIA DGX SuperPOD in Sweden, and states that Pro/API customer text is excluded from training while free-tier inputs may be used to improve models.",
     "localizedDescriptions": {
       "de": "In Köln ansässige KI-Übersetzungsplattform, die weithin als genauer und natürlicher klingend als Google Translate gilt. Bietet neuronale maschinelle Übersetzung für über 30 Sprachen, Dokumentenübersetzung, einen Schreibassistenten und eine Entwickler-API — alles betrieben von proprietären Deep-Learning-Modellen, die in Europa trainiert wurden."
     },
@@ -256,7 +256,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "pricing": "freemium",
     "website": "https://element.io",
-    "description": "Flagship client for the decentralized Matrix protocol, enabling federated real-time messaging, voice, and video across organizations. Used by governments and NATO, Element lets you self-host or use managed servers, keeping full ownership of your data.",
+    "description": "Flagship client for the decentralized Matrix protocol, enabling federated real-time messaging, voice, and video across organizations. Element clients are licensed under Apache 2.0, while the main Matrix homeserver (Synapse) is AGPLv3 to enforce reciprocal contributions for hosted forks.",
     "localizedDescriptions": {
       "de": "Vorzeige-Client für das dezentrale Matrix-Protokoll, der föderiertes Echtzeit-Messaging, Sprach- und Videoanrufe über Organisationsgrenzen hinweg ermöglicht. Element wird von Regierungen und der NATO genutzt und erlaubt Self-Hosting oder verwaltete Server bei voller Datenhoheit."
     },
@@ -273,7 +273,7 @@ export const researchAlternatives: Alternative[] = [
     "foundedYear": 2017,
     "headquartersCity": "London",
     "githubUrl": "https://github.com/element-hq",
-    "license": "AGPL-3.0"
+    "license": "Apache-2.0 (Element clients); AGPL-3.0 (Matrix Synapse server)"
   },
   {
     "id": "filen",
@@ -584,7 +584,7 @@ export const researchAlternatives: Alternative[] = [
     "foundedYear": 2016,
     "headquartersCity": "Weimar",
     "githubUrl": "https://github.com/keepassxreboot/keepassxc",
-    "license": "GPL-3.0"
+    "license": "GPL-2.0-or-later / GPL-3.0-or-later"
   },
   {
     "id": "lemmy",
@@ -897,7 +897,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "pricing": "free",
     "website": "https://nextcloud.com",
-    "description": "Self-hosted, open-source cloud platform offering file sync, collaboration, and office editing — trusted by the German and French governments. Nextcloud Hub puts you in full control of your data with no vendor lock-in and no hidden enterprise features behind a paywall.",
+    "description": "Self-hosted, open-source cloud platform offering file sync, collaboration, and office editing — trusted by the German and French governments. Nextcloud uses AGPLv3 and supports end-to-end encryption through dedicated encrypted folders, while default server-side encryption remains admin-accessible.",
     "localizedDescriptions": {
       "de": "Selbst gehostete Open-Source-Cloud-Plattform mit Dateisynchronisation, Zusammenarbeit und Office-Bearbeitung — im Einsatz bei der deutschen und französischen Regierung. Nextcloud Hub gibt dir die volle Kontrolle über deine Daten, ohne Herstellerbindung und ohne versteckte Enterprise-Funktionen hinter einer Bezahlschranke."
     },
@@ -922,28 +922,26 @@ export const researchAlternatives: Alternative[] = [
     "id": "nordvpn",
     "name": "NordVPN",
     "category": "vpn",
-    "country": "nl",
+    "country": "lt",
     "replacesUS": [
       "ExpressVPN"
     ],
     "pricing": "paid",
     "website": "https://nordvpn.com",
-    "description": "Europe's largest cybersecurity unicorn, offering a massive 7,000+ server network across 118 countries with the custom NordLynx protocol built on WireGuard. Nord Security is headquartered in Amsterdam with primary operations in Vilnius, Lithuania, where the Lithuanian founders built the product from the ground up.",
+    "description": "Major VPN provider with a dual structure: legal jurisdiction in Panama and operational headquarters in Vilnius, Lithuania. NordVPN operates a large global server network and NordLynx (WireGuard-based), but service transparency still depends primarily on audits and corporate disclosures rather than open server code.",
     "localizedDescriptions": {
       "de": "Europas größtes Cybersicherheits-Einhorn mit über 7.000 Servern in 118 Ländern und dem eigenen NordLynx-Protokoll auf WireGuard-Basis. Nord Security hat seinen Hauptsitz in Amsterdam mit dem operativen Zentrum in Vilnius, Litauen, wo die litauischen Gründer das Produkt von Grund auf entwickelt haben."
     },
-    "isOpenSource": true,
-    "openSourceLevel": "partial",
+    "isOpenSource": false,
+    "openSourceLevel": "none",
     "tags": [
       "vpn",
       "paid",
-      "open-source",
+      "proprietary",
       "expressvpn"
     ],
     "foundedYear": 2012,
-    "headquartersCity": "Amsterdam",
-    "githubUrl": "https://github.com/NordSecurity/nordvpn-linux",
-    "license": "GPL-3.0 Linux client"
+    "headquartersCity": "Vilnius (operations); Panama (legal jurisdiction)"
   },
   {
     "id": "ollama",
@@ -1049,7 +1047,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "pricing": "freemium",
     "website": "https://osmand.net",
-    "description": "Powerful offline maps and navigation app built on OpenStreetMap data by a Dutch company. Offers detailed topographic maps, hiking and cycling routes, turn-by-turn navigation, public transport and nautical charts — all available fully offline with monthly map updates.",
+    "description": "Powerful offline maps and navigation app built on OpenStreetMap data. OsmAnd's code is GPLv3, while artwork/assets use separate Creative Commons terms; the project also applies an explicit app-store exception to permit distribution through stores with DRM constraints.",
     "localizedDescriptions": {
       "de": "Leistungsstarke Offline-Karten- und Navigations-App basierend auf OpenStreetMap-Daten, entwickelt von einem niederländischen Unternehmen. Bietet detaillierte topografische Karten, Wander- und Radrouten, Schritt-für-Schritt-Navigation, ÖPNV und Seekarten — alles vollständig offline verfügbar mit monatlichen Kartenaktualisierungen."
     },
@@ -1065,7 +1063,7 @@ export const researchAlternatives: Alternative[] = [
     "foundedYear": 2010,
     "headquartersCity": "Amstelveen",
     "githubUrl": "https://github.com/osmandapp/OsmAnd",
-    "license": "GPL-3.0"
+    "license": "GPL-3.0 (code) + CC BY-ND (art/assets) with app-store exception"
   },
   {
     "id": "ovhcloud",
@@ -1322,7 +1320,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "pricing": "freemium",
     "website": "https://prestashop.com",
-    "description": "The most widely adopted open-source e-commerce platform in Europe, powering over 300,000 online shops in 60 languages. Self-hosted and fully customizable, PrestaShop offers a rich module marketplace and is free to download under the Open Software License.",
+    "description": "Leading European open-source e-commerce platform with a self-hosted architecture and broad module ecosystem. PrestaShop uses dual licensing: OSL-3.0 for core code and AFL-3.0 for native modules, while its commercial add-on marketplace layers proprietary business licensing on top.",
     "localizedDescriptions": {
       "de": "Die meistgenutzte Open-Source-E-Commerce-Plattform in Europa mit über 300.000 Online-Shops in 60 Sprachen. Selbst gehostet und vollständig anpassbar, bietet PrestaShop einen umfangreichen Modul-Marktplatz und ist kostenlos unter der Open Software License verfügbar."
     },
@@ -1339,7 +1337,7 @@ export const researchAlternatives: Alternative[] = [
     "foundedYear": 2007,
     "headquartersCity": "Paris",
     "githubUrl": "https://github.com/PrestaShop/PrestaShop",
-    "license": "OSL-3.0"
+    "license": "OSL-3.0 (core) / AFL-3.0 (native modules)"
   },
   {
     "id": "proton-drive",
@@ -1354,12 +1352,12 @@ export const researchAlternatives: Alternative[] = [
     ],
     "pricing": "freemium",
     "website": "https://proton.me/drive",
-    "description": "End-to-end encrypted cloud storage from the creators of Proton Mail, headquartered in Geneva and protected by Swiss privacy law. All apps are open source and independently audited, ensuring nobody — not even Proton — can access your files.",
+    "description": "End-to-end encrypted cloud storage from Proton AG in Geneva, protected by Swiss law. Proton open-sources and audits its client applications, while backend services remain largely proprietary as in most SaaS zero-knowledge architectures.",
     "localizedDescriptions": {
       "de": "Ende-zu-Ende-verschlüsselter Cloud-Speicher von den Machern von Proton Mail, mit Sitz in Genf und geschützt durch Schweizer Datenschutzrecht. Alle Apps sind quelloffen und unabhängig geprüft — niemand, nicht einmal Proton selbst, kann auf deine Dateien zugreifen."
     },
     "isOpenSource": true,
-    "openSourceLevel": "full",
+    "openSourceLevel": "partial",
     "tags": [
       "cloud-storage",
       "freemium",
@@ -1373,7 +1371,7 @@ export const researchAlternatives: Alternative[] = [
     "foundedYear": 2014,
     "headquartersCity": "Geneva",
     "githubUrl": "https://github.com/ProtonDriveApps",
-    "license": "GPL-3.0"
+    "license": "GPL-3.0 (clients); proprietary backend"
   },
   {
     "id": "proton-mail",
@@ -1387,12 +1385,12 @@ export const researchAlternatives: Alternative[] = [
     ],
     "pricing": "freemium",
     "website": "https://proton.me/mail",
-    "description": "Swiss encrypted email born at CERN, offering end-to-end and zero-access encryption so not even Proton can read your messages. With a free tier, open-source clients, and servers protected by Swiss privacy law, it is the most popular privacy-first alternative to Gmail and Outlook.",
+    "description": "Swiss encrypted email born at CERN, offering end-to-end and zero-access encryption with client apps that are open source and audited. Under Swiss law, Proton can still be compelled to perform targeted lawful interception for specific accounts, while blanket retention obligations were rejected in court.",
     "localizedDescriptions": {
       "de": "Verschlüsselter E-Mail-Dienst aus der Schweiz, entstanden am CERN, mit Ende-zu-Ende- und Zero-Access-Verschlüsselung — nicht einmal Proton selbst kann Ihre Nachrichten lesen. Mit kostenlosem Tarif, quelloffenen Clients und Servern unter Schweizer Datenschutzrecht ist er die beliebteste datenschutzfreundliche Alternative zu Gmail und Outlook."
     },
     "isOpenSource": true,
-    "openSourceLevel": "full",
+    "openSourceLevel": "partial",
     "tags": [
       "email",
       "freemium",
@@ -1405,7 +1403,7 @@ export const researchAlternatives: Alternative[] = [
     "foundedYear": 2014,
     "headquartersCity": "Geneva",
     "githubUrl": "https://github.com/ProtonMail",
-    "license": "GPL-3.0"
+    "license": "GPL-3.0 (clients); proprietary backend"
   },
   {
     "id": "proton-pass",
@@ -1419,12 +1417,12 @@ export const researchAlternatives: Alternative[] = [
     ],
     "pricing": "freemium",
     "website": "https://proton.me/pass",
-    "description": "End-to-end encrypted password and identity manager from Swiss-based Proton AG, featuring built-in email aliasing, passkey support, and a generous free tier. Integrates seamlessly with the Proton ecosystem (Mail, VPN, Drive) and stores all data under Swiss privacy law with zero-access encryption.",
+    "description": "End-to-end encrypted password and identity manager from Swiss-based Proton AG with aliases and passkey support. Proton Pass clients are open source, while backend service components remain proprietary, matching Proton's broader SaaS architecture.",
     "localizedDescriptions": {
       "de": "Ende-zu-Ende-verschlüsselter Passwort- und Identitätsmanager von der Schweizer Proton AG mit integriertem E-Mail-Aliasing, Passkey-Unterstützung und einem großzügigen Gratisangebot. Nahtlose Integration in das Proton-Ökosystem (Mail, VPN, Drive) mit Speicherung unter Schweizer Datenschutzrecht und Zero-Access-Verschlüsselung."
     },
     "isOpenSource": true,
-    "openSourceLevel": "full",
+    "openSourceLevel": "partial",
     "tags": [
       "password-manager",
       "freemium",
@@ -1438,7 +1436,7 @@ export const researchAlternatives: Alternative[] = [
     "foundedYear": 2023,
     "headquartersCity": "Geneva",
     "githubUrl": "https://github.com/protonpass",
-    "license": "GPL-3.0"
+    "license": "GPL-3.0 (clients); proprietary backend"
   },
   {
     "id": "proton-vpn",
@@ -1450,12 +1448,12 @@ export const researchAlternatives: Alternative[] = [
     ],
     "pricing": "freemium",
     "website": "https://protonvpn.com",
-    "description": "Swiss high-speed VPN from the creators of Proton Mail, operated by the non-profit Proton AG under strict Swiss privacy law. Offers a genuinely unlimited free tier with no ads and no data caps — the only major VPN to do so — plus Secure Core multi-hop routing and NetShield ad-blocker on paid plans.",
+    "description": "Swiss VPN from Proton AG with a large free tier, Secure Core multi-hop routing, and audited client apps. Proton states that VPN services operate under different Swiss retention obligations than email, but the backend service itself remains proprietary.",
     "localizedDescriptions": {
       "de": "Schweizer Hochgeschwindigkeits-VPN von den Machern von Proton Mail, betrieben von der gemeinnützigen Proton AG unter strengem Schweizer Datenschutzrecht. Bietet eine echte, unbegrenzte Gratis-Stufe ohne Werbung und ohne Datenlimit sowie Secure-Core-Multi-Hop-Routing und NetShield-Werbeblocker in den Bezahlplänen."
     },
     "isOpenSource": true,
-    "openSourceLevel": "full",
+    "openSourceLevel": "partial",
     "tags": [
       "vpn",
       "freemium",
@@ -1466,7 +1464,7 @@ export const researchAlternatives: Alternative[] = [
     "foundedYear": 2017,
     "headquartersCity": "Geneva",
     "githubUrl": "https://github.com/ProtonVPN",
-    "license": "GPL-3.0"
+    "license": "GPL-3.0 (clients); proprietary backend"
   },
   {
     "id": "saleor",
@@ -1535,7 +1533,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "pricing": "freemium",
     "website": "https://www.shopware.com",
-    "description": "German open-source e-commerce platform built on Symfony and Vue.js, and market leader in Germany's top-1000 online shops. The MIT-licensed Community Edition is free, while commercial plans add headless capabilities, B2B features, and SaaS hosting.",
+    "description": "German open-source e-commerce platform built on Symfony and Vue.js. Shopware 6 Community Edition is MIT-licensed, while commercial plans add SaaS and enterprise features; contributors sign a CLA that grants shopware AG explicit rights to contributed code.",
     "localizedDescriptions": {
       "de": "Deutsche Open-Source-E-Commerce-Plattform auf Basis von Symfony und Vue.js und Marktführer unter den Top-1000-Online-Shops in Deutschland. Die MIT-lizenzierte Community Edition ist kostenlos, während kommerzielle Pläne Headless-Fähigkeiten, B2B-Funktionen und SaaS-Hosting bieten."
     },
@@ -1552,7 +1550,7 @@ export const researchAlternatives: Alternative[] = [
     "foundedYear": 2000,
     "headquartersCity": "Schoeppingen",
     "githubUrl": "https://github.com/shopware/shopware",
-    "license": "MIT"
+    "license": "MIT (Community Edition, with contributor CLA)"
   },
   {
     "id": "simple-analytics",
@@ -1594,7 +1592,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "pricing": "freemium",
     "website": "https://stability.ai",
-    "description": "London-based company behind Stable Diffusion, one of the most widely used open-source image generation models in the world. Offers text-to-image, image-to-video, and audio generation with open model weights, enabling local deployment without reliance on US cloud providers.",
+    "description": "London-based company behind Stable Diffusion, now operating under a source-available licensing model for newer releases. Since July 2024, Stability AI's Community License is free only for entities below USD 1M annual revenue, with enterprise licensing required above that threshold.",
     "localizedDescriptions": {
       "de": "In London ansässiges Unternehmen hinter Stable Diffusion, einem der weltweit meistgenutzten Open-Source-Bildgenerierungsmodelle. Bietet Text-zu-Bild, Bild-zu-Video und Audiogenerierung mit offenen Modellgewichten und ermöglicht lokalen Betrieb ohne Abhängigkeit von US-Cloud-Anbietern."
     },
@@ -1611,7 +1609,7 @@ export const researchAlternatives: Alternative[] = [
     "foundedYear": 2019,
     "headquartersCity": "London",
     "githubUrl": "https://github.com/Stability-AI",
-    "license": "community license"
+    "license": "Community License (<= USD 1M revenue) / Enterprise License"
   },
   {
     "id": "startmail",
@@ -1654,7 +1652,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "pricing": "freemium",
     "website": "https://taiga.io",
-    "description": "Free, open-source agile project management platform from Madrid, purpose-built for cross-functional teams. Taiga offers Scrum backlogs, Kanban boards, sprint planning, issue tracking, and a wiki — all in a clean interface that makes agile workflows accessible to everyone.",
+    "description": "Open-source agile project management platform from Madrid for Scrum and Kanban teams. Taiga uses a split licensing approach: backend under MPL 2.0 and frontend under AGPLv3.",
     "localizedDescriptions": {
       "de": "Freie, quelloffene agile Projektmanagement-Plattform aus Madrid, speziell für crossfunktionale Teams entwickelt. Taiga bietet Scrum-Backlogs, Kanban-Boards, Sprint-Planung, Issue-Tracking und ein Wiki — alles in einer übersichtlichen Oberfläche, die agile Arbeitsweisen für alle zugänglich macht."
     },
@@ -1683,7 +1681,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "pricing": "paid",
     "website": "https://threema.ch",
-    "description": "Swiss-engineered end-to-end encrypted messenger that requires no phone number or email to sign up, offering maximum anonymity. All servers are in Switzerland, the apps are fully open source, and a one-time purchase means no subscriptions and no ads ever.",
+    "description": "Swiss end-to-end encrypted messenger with one-time paid licensing and no phone-number requirement. Threema clients are AGPLv3 and auditable, but service access is commercial: official builds validate store/shop licenses, and self-compiled builds need allowlisting for full network participation.",
     "localizedDescriptions": {
       "de": "In der Schweiz entwickelter Ende-zu-Ende-verschlüsselter Messenger, der weder Telefonnummer noch E-Mail zur Registrierung benötigt und so maximale Anonymität bietet. Alle Server stehen in der Schweiz, die Apps sind vollständig Open Source, und ein einmaliger Kauf bedeutet keine Abonnements und keine Werbung."
     },
