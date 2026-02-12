@@ -207,7 +207,7 @@ function parseResearchEntries(markdown) {
       tags: [],
       foundedYear: undefined,
       headquartersCity: undefined,
-      githubUrl: undefined,
+      sourceCodeUrl: undefined,
       license: undefined,
     };
 
@@ -249,11 +249,11 @@ function parseResearchEntries(markdown) {
       }
 
       if (line.startsWith('- **Website:**')) {
-        const match = line.match(/- \*\*Website:\*\*\s*([^|\s]+)(?:\s*\|\s*\*\*GitHub:\*\*\s*(\S+))?/);
+        const match = line.match(/- \*\*Website:\*\*\s*([^|\s]+)(?:\s*\|\s*\*\*(?:Source|GitHub):\*\*\s*(\S+))?/);
         if (match) {
           entry.website = match[1].trim();
           if (match[2]) {
-            entry.githubUrl = match[2].trim();
+            entry.sourceCodeUrl = match[2].trim();
           }
         }
       }

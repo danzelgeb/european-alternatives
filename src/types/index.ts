@@ -13,7 +13,7 @@ export interface Alternative {
   usVendorComparisons?: USVendorComparison[];
   isOpenSource: boolean;
   openSourceLevel?: OpenSourceLevel;
-  githubUrl?: string;
+  sourceCodeUrl?: string;
   pricing: 'free' | 'freemium' | 'paid';
   tags: string[];
   foundedYear?: number;

@@ -55,10 +55,12 @@ Gather the following about the alternative:
 | `pricing` | Yes | `"free"`, `"freemium"`, or `"paid"` |
 | `tags` | Yes | `["privacy", "self-hosted", "GDPR"]` — relevant keywords |
 | `logo` | No | `"/logos/nextcloud.svg"` — path to logo file |
-| `githubUrl` | No | `"https://github.com/nextcloud/server"` |
+| `sourceCodeUrl` | No | `"https://codeberg.org/nextcloud/server"` |
 | `foundedYear` | No | `2016` |
 | `headquartersCity` | No | `"Stuttgart"` |
 | `license` | No | `"AGPL-3.0"` |
+
+`sourceCodeUrl` can point to any public repository host (GitHub, Codeberg, GitLab, Forgejo, or self-hosted Git).
 
 ### Step 2: Add the Entry
 
@@ -75,7 +77,7 @@ Open `src/data/alternatives.ts` and add your entry to the `alternatives` array:
   category: 'cloud-storage',
   replacesUS: ['Google Drive', 'Dropbox', 'OneDrive'],
   isOpenSource: true,
-  githubUrl: 'https://github.com/nextcloud/server',
+  sourceCodeUrl: 'https://codeberg.org/nextcloud/server',
   pricing: 'free',
   tags: ['self-hosted', 'file-sync', 'collaboration', 'GDPR', 'privacy'],
   foundedYear: 2016,

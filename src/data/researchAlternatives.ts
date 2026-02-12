@@ -31,7 +31,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2010,
     "headquartersCity": "Perugia",
-    "githubUrl": "https://github.com/AirVPN/Eddie",
+    "sourceCodeUrl": "https://github.com/AirVPN/Eddie",
     "license": "GPL-3.0"
   },
   {
@@ -63,7 +63,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2015,
     "headquartersCity": "Santa Barbara, CA",
-    "githubUrl": "https://github.com/bitwarden",
+    "sourceCodeUrl": "https://github.com/bitwarden",
     "license": "GPL-3.0 / AGPL-3.0"
   },
   {
@@ -93,7 +93,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2024,
     "headquartersCity": "Freiburg",
-    "githubUrl": "https://github.com/black-forest-labs",
+    "sourceCodeUrl": "https://github.com/black-forest-labs",
     "license": "Apache-2.0 (FLUX.1 [schnell]); non-commercial (FLUX.1 [dev]); proprietary API (FLUX.1 [pro])"
   },
   {
@@ -124,7 +124,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2005,
     "headquartersCity": "Cambridge",
-    "githubUrl": "https://github.com/CollaboraOnline/online",
+    "sourceCodeUrl": "https://github.com/CollaboraOnline/online",
     "license": "MPL-2.0"
   },
   {
@@ -156,7 +156,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2017,
     "headquartersCity": "Paris",
-    "githubUrl": "https://github.com/cryptpad/cryptpad",
+    "sourceCodeUrl": "https://github.com/cryptpad/cryptpad",
     "license": "AGPL-3.0"
   },
   {
@@ -184,7 +184,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2017,
     "headquartersCity": "Cologne",
-    "githubUrl": "https://github.com/DeepLcom"
+    "sourceCodeUrl": "https://github.com/DeepLcom"
   },
   {
     "id": "diaspora",
@@ -211,7 +211,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2010,
     "headquartersCity": "open",
-    "githubUrl": "https://github.com/diaspora/diaspora",
+    "sourceCodeUrl": "https://github.com/diaspora/diaspora",
     "license": "AGPL-3.0"
   },
   {
@@ -272,7 +272,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2017,
     "headquartersCity": "London",
-    "githubUrl": "https://github.com/element-hq",
+    "sourceCodeUrl": "https://github.com/element-hq",
     "license": "Apache-2.0 (Element clients); AGPL-3.0 (Matrix Synapse server)"
   },
   {
@@ -306,7 +306,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2021,
     "headquartersCity": "Recklinghausen",
-    "githubUrl": "https://github.com/FilenCloudDienste",
+    "sourceCodeUrl": "https://github.com/FilenCloudDienste",
     "license": "AGPL-3.0"
   },
   {
@@ -336,7 +336,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2010,
     "headquartersCity": "open",
-    "githubUrl": "https://github.com/friendica/friendica",
+    "sourceCodeUrl": "https://github.com/friendica/friendica",
     "license": "AGPL-3.0"
   },
   {
@@ -426,7 +426,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2016,
     "headquartersCity": "Paris",
-    "githubUrl": "https://github.com/huggingface",
+    "sourceCodeUrl": "https://github.com/huggingface",
     "license": "Apache-2.0"
   },
   {
@@ -490,7 +490,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 1994,
     "headquartersCity": "Geneva",
-    "githubUrl": "https://github.com/Infomaniak",
+    "sourceCodeUrl": "https://github.com/Infomaniak",
     "license": "GPL-3.0 (clients); proprietary managed backend"
   },
   {
@@ -522,7 +522,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 1988,
     "headquartersCity": "Montabaur",
-    "githubUrl": "https://github.com/ionos-cloud"
+    "sourceCodeUrl": "https://github.com/ionos-cloud"
   },
   {
     "id": "ivpn",
@@ -550,7 +550,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2009,
     "headquartersCity": "Gibraltar",
-    "githubUrl": "https://github.com/ivpn",
+    "sourceCodeUrl": "https://github.com/ivpn",
     "license": "GPL-3.0"
   },
   {
@@ -583,7 +583,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2016,
     "headquartersCity": "Weimar",
-    "githubUrl": "https://github.com/keepassxreboot/keepassxc",
+    "sourceCodeUrl": "https://github.com/keepassxreboot/keepassxc",
     "license": "GPL-2.0-or-later / GPL-3.0-or-later"
   },
   {
@@ -613,7 +613,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2019,
     "headquartersCity": "open",
-    "githubUrl": "https://github.com/LemmyNet/lemmy",
+    "sourceCodeUrl": "https://github.com/LemmyNet/lemmy",
     "license": "AGPL-3.0"
   },
   {
@@ -642,7 +642,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2010,
     "headquartersCity": "Berlin",
-    "githubUrl": "https://github.com/LibreOffice/core",
+    "sourceCodeUrl": "https://github.com/LibreOffice/core",
     "license": "MPL-2.0"
   },
   {
@@ -761,7 +761,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2016,
     "headquartersCity": "Berlin",
-    "githubUrl": "https://github.com/mastodon/mastodon",
+    "sourceCodeUrl": "https://github.com/mastodon/mastodon",
     "license": "AGPL-3.0"
   },
   {
@@ -794,7 +794,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2007,
     "headquartersCity": "French",
-    "githubUrl": "https://github.com/matomo-org/matomo",
+    "sourceCodeUrl": "https://github.com/matomo-org/matomo",
     "license": "GPL-3.0"
   },
   {
@@ -826,7 +826,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2004,
     "headquartersCity": "Amsterdam",
-    "githubUrl": "https://github.com/mollie"
+    "sourceCodeUrl": "https://github.com/mollie"
   },
   {
     "id": "mullvad-browser",
@@ -858,7 +858,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2023,
     "headquartersCity": "Gothenburg",
-    "githubUrl": "https://github.com/mullvad/mullvad-browser",
+    "sourceCodeUrl": "https://github.com/mullvad/mullvad-browser",
     "license": "MPL-2.0"
   },
   {
@@ -887,7 +887,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2009,
     "headquartersCity": "Gothenburg",
-    "githubUrl": "https://github.com/mullvad/mullvadvpn-app",
+    "sourceCodeUrl": "https://github.com/mullvad/mullvadvpn-app",
     "license": "GPL-3.0"
   },
   {
@@ -921,7 +921,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2016,
     "headquartersCity": "Stuttgart",
-    "githubUrl": "https://github.com/nextcloud",
+    "sourceCodeUrl": "https://github.com/nextcloud",
     "license": "AGPL-3.0"
   },
   {
@@ -951,7 +951,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2012,
     "headquartersCity": "Amsterdam (HQ); Vilnius (operations)",
-    "githubUrl": "https://github.com/NordSecurity/nordvpn-linux",
+    "sourceCodeUrl": "https://github.com/NordSecurity/nordvpn-linux",
     "license": "GPL-3.0 (Linux client); proprietary backend and infrastructure"
   },
   {
@@ -982,7 +982,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2023,
     "headquartersCity": "Palo Alto, CA",
-    "githubUrl": "https://github.com/ollama/ollama",
+    "sourceCodeUrl": "https://github.com/ollama/ollama",
     "license": "MIT"
   },
   {
@@ -1013,7 +1013,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2012,
     "headquartersCity": "Berlin",
-    "githubUrl": "https://github.com/opf/openproject",
+    "sourceCodeUrl": "https://github.com/opf/openproject",
     "license": "GPL-3.0"
   },
   {
@@ -1043,7 +1043,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2020,
     "headquartersCity": "Tallinn",
-    "githubUrl": "https://github.com/organicmaps/organicmaps",
+    "sourceCodeUrl": "https://github.com/organicmaps/organicmaps",
     "license": "Apache-2.0"
   },
   {
@@ -1073,7 +1073,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2010,
     "headquartersCity": "Amstelveen",
-    "githubUrl": "https://github.com/osmandapp/OsmAnd",
+    "sourceCodeUrl": "https://github.com/osmandapp/OsmAnd",
     "license": "GPL-3.0 (code) + CC BY-ND (art/assets) with app-store exception"
   },
   {
@@ -1134,7 +1134,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2016,
     "headquartersCity": "Esch",
-    "githubUrl": "https://github.com/passbolt",
+    "sourceCodeUrl": "https://github.com/passbolt",
     "license": "AGPL-3.0"
   },
   {
@@ -1196,7 +1196,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2018,
     "headquartersCity": "Lyon",
-    "githubUrl": "https://github.com/Chocobozzz/PeerTube",
+    "sourceCodeUrl": "https://github.com/Chocobozzz/PeerTube",
     "license": "AGPL-3.0"
   },
   {
@@ -1227,7 +1227,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2020,
     "headquartersCity": "Rheda",
-    "githubUrl": "https://github.com/pirsch-analytics/pirsch",
+    "sourceCodeUrl": "https://github.com/pirsch-analytics/pirsch",
     "license": "AGPL-3.0"
   },
   {
@@ -1257,7 +1257,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2018,
     "headquartersCity": "open",
-    "githubUrl": "https://github.com/pixelfed/pixelfed",
+    "sourceCodeUrl": "https://github.com/pixelfed/pixelfed",
     "license": "AGPL-3.0"
   },
   {
@@ -1291,7 +1291,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2018,
     "headquartersCity": "Tartu",
-    "githubUrl": "https://github.com/plausible/analytics",
+    "sourceCodeUrl": "https://github.com/plausible/analytics",
     "license": "AGPL-3.0 (Community Edition) + source-available commercial features"
   },
   {
@@ -1350,7 +1350,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2007,
     "headquartersCity": "Paris",
-    "githubUrl": "https://github.com/PrestaShop/PrestaShop",
+    "sourceCodeUrl": "https://github.com/PrestaShop/PrestaShop",
     "license": "OSL-3.0 (core) / AFL-3.0 (native modules)"
   },
   {
@@ -1384,7 +1384,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2014,
     "headquartersCity": "Geneva",
-    "githubUrl": "https://github.com/ProtonDriveApps",
+    "sourceCodeUrl": "https://github.com/ProtonDriveApps",
     "license": "GPL-3.0 (clients); proprietary backend"
   },
   {
@@ -1416,7 +1416,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2014,
     "headquartersCity": "Geneva",
-    "githubUrl": "https://github.com/ProtonMail",
+    "sourceCodeUrl": "https://github.com/ProtonMail",
     "license": "GPL-3.0 (clients); proprietary backend"
   },
   {
@@ -1449,7 +1449,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2023,
     "headquartersCity": "Geneva",
-    "githubUrl": "https://github.com/protonpass",
+    "sourceCodeUrl": "https://github.com/protonpass",
     "license": "GPL-3.0 (clients); proprietary backend"
   },
   {
@@ -1477,7 +1477,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2017,
     "headquartersCity": "Geneva",
-    "githubUrl": "https://github.com/ProtonVPN",
+    "sourceCodeUrl": "https://github.com/ProtonVPN",
     "license": "GPL-3.0 (clients); proprietary backend"
   },
   {
@@ -1504,7 +1504,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2020,
     "headquartersCity": "Wroclaw",
-    "githubUrl": "https://github.com/saleor/saleor",
+    "sourceCodeUrl": "https://github.com/saleor/saleor",
     "license": "BSD-3-Clause"
   },
   {
@@ -1564,7 +1564,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2000,
     "headquartersCity": "Schöppingen",
-    "githubUrl": "https://github.com/shopware/shopware",
+    "sourceCodeUrl": "https://github.com/shopware/shopware",
     "license": "MIT (Community Edition, with contributor CLA)"
   },
   {
@@ -1623,7 +1623,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2019,
     "headquartersCity": "London",
-    "githubUrl": "https://github.com/Stability-AI",
+    "sourceCodeUrl": "https://github.com/Stability-AI",
     "license": "Community License (<= USD 1M revenue) / Enterprise License"
   },
   {
@@ -1682,7 +1682,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2014,
     "headquartersCity": "Madrid",
-    "githubUrl": "https://github.com/kaleidos-ventures/taiga",
+    "sourceCodeUrl": "https://github.com/kaleidos-ventures/taiga",
     "license": "MPL-2.0 / AGPL-3.0"
   },
   {
@@ -1713,7 +1713,7 @@ export const researchAlternatives: Alternative[] = [
     ],
     "foundedYear": 2012,
     "headquartersCity": "Pfäffikon",
-    "githubUrl": "https://github.com/threema-ch",
+    "sourceCodeUrl": "https://github.com/threema-ch",
     "license": "AGPL-3.0"
   },
   {
@@ -1743,7 +1743,7 @@ export const researchAlternatives: Alternative[] = [
       "asana"
     ],
     "foundedYear": 2018,
-    "githubUrl": "https://github.com/go-vikunja/vikunja",
+    "sourceCodeUrl": "https://github.com/go-vikunja/vikunja",
     "license": "AGPL-3.0"
   },
   {
