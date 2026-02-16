@@ -661,4 +661,35 @@ export const manualAlternatives: Alternative[] = [
     headquartersCity: 'Strasbourg',
     license: 'Apache-2.0',
   },
+  {
+    id: 'contabo',
+    name: 'Contabo',
+    description:
+      'German cloud hosting provider offering VPS, dedicated servers, and S3-compatible object storage at highly competitive prices. Founded in 2003 in Munich with over 20 years of operation and data centers across Europe, the US, and Asia.',
+    localizedDescriptions: {
+      de: 'Deutscher Cloud-Hosting-Anbieter mit VPS, dedizierten Servern und S3-kompatiblem Objektspeicher zu sehr wettbewerbsfaehigen Preisen. 2003 in Muenchen gegruendet, mit ueber 20 Jahren Betrieb und Rechenzentren in Europa, den USA und Asien.',
+    },
+    website: 'https://contabo.com',
+    logo: '/logos/contabo.svg',
+    country: 'de',
+    category: 'hosting',
+    replacesUS: ['AWS', 'Google Cloud', 'Azure', 'Cloudflare'],
+    isOpenSource: false,
+    openSourceLevel: 'none',
+    sourceCodeUrl: 'https://github.com/contabo',
+    pricing: 'paid',
+    tags: ['hosting', 'cloud', 'vps', 'dedicated-servers', 'gdpr', 'object-storage'],
+    foundedYear: 2003,
+    headquartersCity: 'Munich',
+    reservations: [
+      {
+        id: 'kkr-majority-ownership',
+        text: 'Contabo has been majority-owned by KKR, a US-based private equity firm, since 2022. While the company remains operationally German (GmbH, Munich HQ), ultimate financial control rests with a US entity.',
+        textDe: 'Contabo befindet sich seit 2022 mehrheitlich im Besitz von KKR, einer US-amerikanischen Private-Equity-Gesellschaft. Obwohl das Unternehmen operativ deutsch bleibt (GmbH, Hauptsitz Muenchen), liegt die finanzielle Kontrolle bei einem US-Unternehmen.',
+        severity: 'major',
+        date: '2022-06-08',
+        sourceUrl: 'https://media.kkr.com/rss-feed/news-release?news_id=6e034e18-6db9-4f06-b777-6ebda65de47d&type=1',
+      },
+    ],
+  },
 ];
